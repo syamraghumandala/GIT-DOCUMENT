@@ -1,0 +1,196 @@
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ date
+Wed Dec 17 10:31:24 IST 2025
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ git --version
+git version 2.52.0.windows.1
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ git clone https://github.com/syamraghumandala/CHERRYPICK.git
+Cloning into 'CHERRYPICK'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ pwd
+/c/Syam/DevOps/git
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ ls -al
+total 20
+drwxr-xr-x 1 syamp 197609 0 Dec 17 10:31 ./
+drwxr-xr-x 1 syamp 197609 0 Dec  6 11:05 ../
+drwxr-xr-x 1 syamp 197609 0 Dec 11 10:55 Branch/
+drwxr-xr-x 1 syamp 197609 0 Dec 17 10:31 CHERRYPICK/
+drwxr-xr-x 1 syamp 197609 0 Dec 16 11:10 MERGE/
+drwxr-xr-x 1 syamp 197609 0 Dec  9 11:03 REPO-1/
+drwxr-xr-x 1 syamp 197609 0 Dec  9 10:56 Repo--02/
+drwxr-xr-x 1 syamp 197609 0 Dec 15 10:46 Repo-3/
+drwxr-xr-x 1 syamp 197609 0 Dec 16 10:37 Stash/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ cd CHERRYPICK/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git log --oneline
+aedfb7d (HEAD -> main, origin/main, origin/HEAD) Initial commit
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git branch
+* main
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git branch cherrybranch
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git branch
+  cherrybranch
+* main
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ touch main1 main2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git sta
+git: 'sta' is not a git command. See 'git --help'.
+
+The most similar commands are
+        status
+        stage
+        stash
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main1
+        main2
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git add .
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   main1
+        new file:   main2
+
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git commit -m "main files are committed at mainbranch "
+[main 8c4876f] main files are committed at mainbranch
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main1
+ create mode 100644 main2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ touch main3 main4
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        main3
+        main4
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git add .
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   main3
+        new file:   main4
+
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git commit -m "main3 and main4 files are committed at main"
+[main 67f5206] main3 and main4 files are committed at main
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main3
+ create mode 100644 main4
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git log --oneline
+67f5206 (HEAD -> main) main3 and main4 files are committed at main
+8c4876f main files are committed at mainbranch
+aedfb7d (origin/main, origin/HEAD, cherrybranch) Initial commit
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (main)
+$ git switch cherrybranch
+Switched to branch 'cherrybranch'
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (cherrybranch)
+$ git branch
+* cherrybranch
+  main
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (cherrybranch)
+$ ls -al
+total 13
+drwxr-xr-x 1 syamp 197609  0 Dec 17 10:38 ./
+drwxr-xr-x 1 syamp 197609  0 Dec 17 10:31 ../
+drwxr-xr-x 1 syamp 197609  0 Dec 17 10:38 .git/
+-rw-r--r-- 1 syamp 197609 12 Dec 17 10:31 README.md
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (cherrybranch)
+$ git log --oneline
+aedfb7d (HEAD -> cherrybranch, origin/main, origin/HEAD) Initial commit
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (cherrybranch)
+$ git cherry-pick 8c4876f
+[cherrybranch 71de61c] main files are committed at mainbranch
+ Date: Wed Dec 17 10:36:09 2025 +0530
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 main1
+ create mode 100644 main2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (cherrybranch)
+$ git log --oneline
+71de61c (HEAD -> cherrybranch) main files are committed at mainbranch
+aedfb7d (origin/main, origin/HEAD) Initial commit
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (cherrybranch)
+$ ls -al
+total 13
+drwxr-xr-x 1 syamp 197609  0 Dec 17 10:40 ./
+drwxr-xr-x 1 syamp 197609  0 Dec 17 10:31 ../
+drwxr-xr-x 1 syamp 197609  0 Dec 17 10:40 .git/
+-rw-r--r-- 1 syamp 197609 12 Dec 17 10:31 README.md
+-rw-r--r-- 1 syamp 197609  0 Dec 17 10:40 main1
+-rw-r--r-- 1 syamp 197609  0 Dec 17 10:40 main2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (cherrybranch)
+$
+
