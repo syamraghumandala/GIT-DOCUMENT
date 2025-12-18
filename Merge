@@ -1,0 +1,97 @@
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/CHERRYPICK (cherrybranch)
+$ cd ..
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ ls -al
+total 28
+drwxr-xr-x 1 syamp 197609 0 Dec 17 10:44 ./
+drwxr-xr-x 1 syamp 197609 0 Dec  6 11:05 ../
+drwxr-xr-x 1 syamp 197609 0 Dec 11 10:55 Branch/
+drwxr-xr-x 1 syamp 197609 0 Dec 17 10:40 CHERRYPICK/
+drwxr-xr-x 1 syamp 197609 0 Dec 17 10:45 GIT-DOCUMENT/
+drwxr-xr-x 1 syamp 197609 0 Dec 16 11:10 MERGE/
+drwxr-xr-x 1 syamp 197609 0 Dec  9 11:03 REPO-1/
+drwxr-xr-x 1 syamp 197609 0 Dec  9 10:56 Repo--02/
+drwxr-xr-x 1 syamp 197609 0 Dec 15 10:46 Repo-3/
+drwxr-xr-x 1 syamp 197609 0 Dec 16 10:37 Stash/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ cd MERGE/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/MERGE (dev)
+$ pwd
+/c/Syam/DevOps/git/MERGE
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/MERGE (dev)
+$ git bra
+git: 'bra' is not a git command. See 'git --help'.
+
+The most similar commands are
+        branch
+        var
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/MERGE (dev)
+$ git branch
+  deploy
+* dev
+  live
+  main
+  prod
+  test
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/MERGE (dev)
+$ git status
+On branch dev
+nothing to commit, working tree clean
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Merge made by the 'ort' strategy.
+ dev1 | 0
+ dev2 | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 dev1
+ create mode 100644 dev2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/MERGE (prod)
+$ ls -al
+total 9
+drwxr-xr-x 1 syamp 197609 0 Dec 18 09:48 ./
+drwxr-xr-x 1 syamp 197609 0 Dec 17 10:44 ../
+drwxr-xr-x 1 syamp 197609 0 Dec 18 09:49 .git/
+-rw-r--r-- 1 syamp 197609 7 Dec 16 10:42 README.md
+-rw-r--r-- 1 syamp 197609 0 Dec 18 09:48 dev1
+-rw-r--r-- 1 syamp 197609 0 Dec 18 09:48 dev2
+-rw-r--r-- 1 syamp 197609 0 Dec 18 09:48 prod1
+-rw-r--r-- 1 syamp 197609 0 Dec 18 09:48 prod2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/MERGE (prod)
+$ git log --oneline
+56a8d6f (HEAD -> prod) Merge commit '24d7830' into prod
+4cca18a prod1 prod2 files are commited
+24d7830 (dev) dev1 dev2 files are committed
+de5e1e9 (origin/main, origin/HEAD) Initial commit
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/MERGE (prod)
+$
+
