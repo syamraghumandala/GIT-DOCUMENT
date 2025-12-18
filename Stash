@@ -1,0 +1,198 @@
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/MERGE (prod)
+$ cd ..
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ pwd
+/c/Syam/DevOps/git
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ ls -al
+total 28
+drwxr-xr-x 1 syamp 197609 0 Dec 17 10:44 ./
+drwxr-xr-x 1 syamp 197609 0 Dec  6 11:05 ../
+drwxr-xr-x 1 syamp 197609 0 Dec 11 10:55 Branch/
+drwxr-xr-x 1 syamp 197609 0 Dec 17 10:40 CHERRYPICK/
+drwxr-xr-x 1 syamp 197609 0 Dec 18 09:52 GIT-DOCUMENT/
+drwxr-xr-x 1 syamp 197609 0 Dec 18 09:48 MERGE/
+drwxr-xr-x 1 syamp 197609 0 Dec  9 11:03 REPO-1/
+drwxr-xr-x 1 syamp 197609 0 Dec  9 10:56 Repo--02/
+drwxr-xr-x 1 syamp 197609 0 Dec 15 10:46 Repo-3/
+drwxr-xr-x 1 syamp 197609 0 Dec 16 10:37 Stash/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ cd Stash/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ pwd
+/c/Syam/DevOps/git/Stash
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ ls -al
+total 13
+drwxr-xr-x 1 syamp 197609 0 Dec 16 10:37 ./
+drwxr-xr-x 1 syamp 197609 0 Dec 17 10:44 ../
+drwxr-xr-x 1 syamp 197609 0 Dec 16 10:34 .git/
+drwxr-xr-x 1 syamp 197609 0 Dec 16 10:37 MERGE/
+-rw-r--r-- 1 syamp 197609 7 Dec 12 10:52 README.md
+-rw-r--r-- 1 syamp 197609 0 Dec 16 10:37 stash
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git branch
+* main
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git log --oneline
+685b010 (HEAD -> main, origin/main, origin/HEAD) Initial commit
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ touch p1 p1 p2 p4
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ ls -al
+total 13
+drwxr-xr-x 1 syamp 197609 0 Dec 18 09:57 ./
+drwxr-xr-x 1 syamp 197609 0 Dec 17 10:44 ../
+drwxr-xr-x 1 syamp 197609 0 Dec 16 10:34 .git/
+drwxr-xr-x 1 syamp 197609 0 Dec 16 10:37 MERGE/
+-rw-r--r-- 1 syamp 197609 7 Dec 12 10:52 README.md
+-rw-r--r-- 1 syamp 197609 0 Dec 18 09:57 p1
+-rw-r--r-- 1 syamp 197609 0 Dec 18 09:57 p2
+-rw-r--r-- 1 syamp 197609 0 Dec 18 09:57 p4
+-rw-r--r-- 1 syamp 197609 0 Dec 16 10:37 stash
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        MERGE/
+        p1
+        p2
+        p4
+        stash
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git add .
+warning: adding embedded git repository: MERGE
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> MERGE
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached MERGE
+hint:
+hint: See "git help submodule" for more information.
+hint: Disable this message with "git config set advice.addEmbeddedRepo false"
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   MERGE
+        new file:   p1
+        new file:   p2
+        new file:   p4
+        new file:   stash
+
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git stash p1
+fatal: subcommand wasn't specified; 'push' can't be assumed due to unexpected token 'p1'
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   MERGE
+        new file:   p1
+        new file:   p2
+        new file:   p4
+        new file:   stash
+
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git stash list
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git stash p1
+fatal: subcommand wasn't specified; 'push' can't be assumed due to unexpected token 'p1'
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git stash p2
+fatal: subcommand wasn't specified; 'push' can't be assumed due to unexpected token 'p2'
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git stath
+git: 'stath' is not a git command. See 'git --help'.
+
+The most similar command is
+        stash
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git stash
+Saved working directory and index state WIP on main: 685b010 Initial commit
+warning: unable to rmdir 'MERGE': Directory not empty
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git stash list
+stash@{0}: WIP on main: 685b010 Initial commit
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git pop stash@{0}
+git: 'pop' is not a git command. See 'git --help'.
+
+The most similar command is
+        repo
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git stash pop stash@{0}
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   MERGE
+        new file:   p1
+        new file:   p2
+        new file:   p4
+        new file:   stash
+
+Dropped stash@{0} (81ac62dd3c652dc8af7bbec2768d3136de0b52d1)
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git statsh drop stash@{0}
+git: 'statsh' is not a git command. See 'git --help'.
+
+The most similar command is
+        stash
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git stash drop stash@{0}
+error: stash@{0} is not a valid reference
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git stash drop stash@{0}
+error: stash@{0} is not a valid reference
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$ git stash list
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/Stash (main)
+$
+
