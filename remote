@@ -1,0 +1,412 @@
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ date
+Fri Dec 19 11:09:45 IST 2025
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ git --version
+git version 2.52.0.windows.1
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ git clone https://github.com/syamraghumandala/REMOTEDEMO.git
+Cloning into 'REMOTEDEMO'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ pwd
+/c/Syam/DevOps/git
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ ls -al
+total 28
+drwxr-xr-x 1 syamp 197609 0 Dec 19 11:10 ./
+drwxr-xr-x 1 syamp 197609 0 Dec  6 11:05 ../
+drwxr-xr-x 1 syamp 197609 0 Dec 11 10:55 Branch/
+drwxr-xr-x 1 syamp 197609 0 Dec 17 10:40 CHERRYPICK/
+drwxr-xr-x 1 syamp 197609 0 Dec 18 10:10 GIT-DOCUMENT/
+drwxr-xr-x 1 syamp 197609 0 Dec 18 09:48 MERGE/
+drwxr-xr-x 1 syamp 197609 0 Dec 19 11:10 REMOTEDEMO/
+drwxr-xr-x 1 syamp 197609 0 Dec  9 11:03 REPO-1/
+drwxr-xr-x 1 syamp 197609 0 Dec  9 10:56 Repo--02/
+drwxr-xr-x 1 syamp 197609 0 Dec 15 10:46 Repo-3/
+drwxr-xr-x 1 syamp 197609 0 Dec 18 10:04 Stash/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git
+$ cd REMOTEDEMO/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git log --oneline
+43664da (HEAD -> main, origin/main, origin/HEAD) Initial commit
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git branch
+* main
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git remote
+origin
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git remote -v
+origin  https://github.com/syamraghumandala/REMOTEDEMO.git (fetch)
+origin  https://github.com/syamraghumandala/REMOTEDEMO.git (push)
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ ls -al
+total 9
+drwxr-xr-x 1 syamp 197609  0 Dec 19 11:10 ./
+drwxr-xr-x 1 syamp 197609  0 Dec 19 11:12 ../
+drwxr-xr-x 1 syamp 197609  0 Dec 19 11:32 .git/
+-rw-r--r-- 1 syamp 197609 12 Dec 19 11:10 README.md
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ cd .git
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ pwd
+/c/Syam/DevOps/git/REMOTEDEMO/.git
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ ls -al
+total 13
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:32 ./
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 ../
+-rw-r--r-- 1 syamp 197609  21 Dec 19 11:10 HEAD
+-rw-r--r-- 1 syamp 197609 309 Dec 19 11:10 config
+-rw-r--r-- 1 syamp 197609  73 Dec 19 11:10 description
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 hooks/
+-rw-r--r-- 1 syamp 197609 137 Dec 19 11:32 index
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 info/
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 logs/
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 objects/
+-rw-r--r-- 1 syamp 197609 112 Dec 19 11:10 packed-refs
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 refs/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ cat config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/syamraghumandala/REMOTEDEMO.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+        remote = origin
+        merge = refs/heads/main
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ git remote add syam https://github.com/syamraghumandala/REMOTEDEMO.git
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ git remote
+origin
+syam
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ git remote add syamtag https://github.com/syamraghumandala/TAG.git
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ git remote
+origin
+syam
+syamtag
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ git status
+fatal: this operation must be run in a work tree
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ ls -al
+total 13
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:42 ./
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 ../
+-rw-r--r-- 1 syamp 197609  21 Dec 19 11:10 HEAD
+-rw-r--r-- 1 syamp 197609 542 Dec 19 11:42 config
+-rw-r--r-- 1 syamp 197609  73 Dec 19 11:10 description
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 hooks/
+-rw-r--r-- 1 syamp 197609 137 Dec 19 11:32 index
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 info/
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 logs/
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 objects/
+-rw-r--r-- 1 syamp 197609 112 Dec 19 11:10 packed-refs
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 refs/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ cat config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/syamraghumandala/REMOTEDEMO.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+        remote = origin
+        merge = refs/heads/main
+[remote "syam"]
+        url = https://github.com/syamraghumandala/REMOTEDEMO.git
+        fetch = +refs/heads/*:refs/remotes/syam/*
+[remote "syamtag"]
+        url = https://github.com/syamraghumandala/TAG.git
+        fetch = +refs/heads/*:refs/remotes/syamtag/*
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ cd ..
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ touch syam1 syam2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        syam1
+        syam2
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git add .
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   syam1
+        new file:   syam2
+
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git commit -m "syam files are commited"
+[main 08aa431] syam files are commited
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 syam1
+ create mode 100644 syam2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git remote
+origin
+syam
+syamtag
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git push syam main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 288 bytes | 288.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/syamraghumandala/REMOTEDEMO.git
+   43664da..08aa431  main -> main
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ touch st1 st2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        st1
+        st2
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git add .
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   st1
+        new file:   st2
+
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git commit -m "st files are committed"
+[main c77430d] st files are committed
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 st1
+ create mode 100644 st2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git log --oneline
+c77430d (HEAD -> main) st files are committed
+08aa431 (syam/main) syam files are commited
+43664da (origin/main, origin/HEAD) Initial commit
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git remote
+origin
+syam
+syamtag
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git push syamtag main
+To https://github.com/syamraghumandala/TAG.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/syamraghumandala/TAG.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ ls -al
+total 13
+drwxr-xr-x 1 syamp 197609  0 Dec 19 11:47 ./
+drwxr-xr-x 1 syamp 197609  0 Dec 19 11:12 ../
+drwxr-xr-x 1 syamp 197609  0 Dec 19 11:48 .git/
+-rw-r--r-- 1 syamp 197609 12 Dec 19 11:10 README.md
+-rw-r--r-- 1 syamp 197609  0 Dec 19 11:47 st1
+-rw-r--r-- 1 syamp 197609  0 Dec 19 11:47 st2
+-rw-r--r-- 1 syamp 197609  0 Dec 19 11:44 syam1
+-rw-r--r-- 1 syamp 197609  0 Dec 19 11:44 syam2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ cd .git
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ pwd
+/c/Syam/DevOps/git/REMOTEDEMO/.git
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ ls -al
+total 22
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:48 ./
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:47 ../
+-rw-r--r-- 1 syamp 197609  23 Dec 19 11:48 COMMIT_EDITMSG
+-rw-r--r-- 1 syamp 197609  21 Dec 19 11:10 HEAD
+-rw-r--r-- 1 syamp 197609 542 Dec 19 11:42 config
+-rw-r--r-- 1 syamp 197609  73 Dec 19 11:10 description
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 hooks/
+-rw-r--r-- 1 syamp 197609 425 Dec 19 11:48 index
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 info/
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 logs/
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:48 objects/
+-rw-r--r-- 1 syamp 197609 112 Dec 19 11:10 packed-refs
+drwxr-xr-x 1 syamp 197609   0 Dec 19 11:10 refs/
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ cat config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/syamraghumandala/REMOTEDEMO.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+        remote = origin
+        merge = refs/heads/main
+[remote "syam"]
+        url = https://github.com/syamraghumandala/REMOTEDEMO.git
+        fetch = +refs/heads/*:refs/remotes/syam/*
+[remote "syamtag"]
+        url = https://github.com/syamraghumandala/TAG.git
+        fetch = +refs/heads/*:refs/remotes/syamtag/*
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO/.git (GIT_DIR!)
+$ cd ..
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git remote
+origin
+syam
+syamtag
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git pull syamtag main
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (6/6), 1.77 KiB | 50.00 KiB/s, done.
+From https://github.com/syamraghumandala/TAG
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> syamtag/main
+fatal: refusing to merge unrelated histories
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ ls -al
+total 13
+drwxr-xr-x 1 syamp 197609  0 Dec 19 11:47 ./
+drwxr-xr-x 1 syamp 197609  0 Dec 19 11:12 ../
+drwxr-xr-x 1 syamp 197609  0 Dec 19 11:54 .git/
+-rw-r--r-- 1 syamp 197609 12 Dec 19 11:10 README.md
+-rw-r--r-- 1 syamp 197609  0 Dec 19 11:47 st1
+-rw-r--r-- 1 syamp 197609  0 Dec 19 11:47 st2
+-rw-r--r-- 1 syamp 197609  0 Dec 19 11:44 syam1
+-rw-r--r-- 1 syamp 197609  0 Dec 19 11:44 syam2
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git log --oneline
+c77430d (HEAD -> main) st files are committed
+08aa431 (syam/main) syam files are commited
+43664da (origin/main, origin/HEAD) Initial commit
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$ git push syamtag main
+To https://github.com/syamraghumandala/TAG.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/syamraghumandala/TAG.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+syamp@Syam MINGW64 /c/Syam/DevOps/git/REMOTEDEMO (main)
+$
+
